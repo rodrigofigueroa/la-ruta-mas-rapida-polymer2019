@@ -114,7 +114,7 @@ class App extends connect(store)(LitElement) {
       <!-- Header -->
       <header class="header-app">
         <div class="title container-app">
-          Catsys (beta)
+          ¿Donde viene mi camión?
         </div>
         <nav class="navbar-principal">
           <a class="home" ?selected="${this._page === 'home'}" href="/home">Home</a>
@@ -136,12 +136,8 @@ class App extends connect(store)(LitElement) {
       </main>
       <footer class="footer-app">
         <div class="container-footer">
-          <p>Made with &#9829; by the Catsys team.</p>
+          <p>Desarrollado por team "Los Guaches".</p>
         </div>
-        <a class="social-github" href="https://github.com/alfonsorios96/catsys-cli">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="github-logo">
-          <b>View on github</b>
-        </a>
       </footer>
     `;
   }
