@@ -1,5 +1,7 @@
 import { html, LitElement,  css } from 'lit-element';
 
+import { FuntionComponent } from '../funtions/funtion-component.js';
+
 export class ListComponent extends LitElement {
     static get styles() {
         return css`        
@@ -53,26 +55,10 @@ export class ListComponent extends LitElement {
             prop: { type: String }
         }
     }
-    constructor(){
+    constructor( ){
         super();
         this.prop = ''
     }
-
-    getTruckData(){
-        // document.addEventListener('DOMContentLoaded', event => {
-            const app = firebase.app();
-            const db = firebase.firestore();
-            const truck1 = db.collection('trucks').doc('truck1');
-            truck1.onSnapshot( doc => {
-                const data = doc.data()
-                // document.write(data)
-                console.log(data);
-                this.prop = data
-            }  
-                )
-        // })
-    }
-    
 
    render(){
        var myvar = `Hola mundo`;
@@ -84,7 +70,7 @@ export class ListComponent extends LitElement {
         <h1>Rutas </h1>
     </div>     
     <div class="container-rutas">               
-        <select class="custom-select-dos">
+        <select class="custom-select-dos" id="ruta">
             <option value="r-1">Ruta 1</option>
             <option value="r-2">Ruta 2</option>
         </select>     
