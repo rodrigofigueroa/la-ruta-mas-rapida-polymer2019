@@ -19,8 +19,8 @@ export class MapsElement extends LitElement {
         super()
         window.addEventListener('google-map-ready', () => {
             this._mapRef = new google.maps.Map(this.shadowRoot.querySelector('#map'), {
-              center: { lat: 40, lng: -112 },
-              zoom: 5,
+              center: { lat: 19.428475, lng: -99.206574 },
+              zoom: 16,
               streetViewControl: false,
             });
             this._putMarkersOnMap(this._markers);
