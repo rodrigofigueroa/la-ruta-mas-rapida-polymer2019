@@ -1,7 +1,5 @@
 import { html, LitElement,  css } from 'lit-element';
 
-import { FuntionComponent } from '../funtions/funtion-component.js';
-
 export class ListComponent extends LitElement {
     static get styles() {
         return css`        
@@ -55,15 +53,30 @@ export class ListComponent extends LitElement {
             prop: { type: String }
         }
     }
-    constructor( ){
+    constructor(){
         super();
         this.prop = ''
     }
 
+    getTruckData(){
+        // document.addEventListener('DOMContentLoaded', event => {
+            const app = firebase.app();
+            const db = firebase.firestore();
+            const truck1 = db.collection('trucks').doc('truck1');
+            truck1.onSnapshot( doc => {
+                const data = doc.data()
+                // document.write(data)
+                this.prop = data
+            }  
+                )
+        // })
+    }
+    
+
    render(){
        var myvar = `Hola mundo`;
        var trucks = this.getTruckData()
-       console.log('trucks'+trucks);
+
 
     return html `
     <div class="elige-rutas">
