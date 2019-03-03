@@ -40,8 +40,8 @@ class App extends connect(store)(LitElement) {
           grid-area: header;
           min-height: 60px;
           line-height: 30px;
-          background-color: #233142;
-          color: #e5e5e5;
+          background-color: #182A4B;
+          color: #fff;
           text-align:center;
         }
         .main-app {
@@ -51,7 +51,7 @@ class App extends connect(store)(LitElement) {
           grid-area: footer;
           height: 60px;
           display: flex;
-          justify-content: flex-start;
+          justify-content: center;
         }
         .container-app {
           /*padding: 15px;*/
@@ -90,7 +90,7 @@ class App extends connect(store)(LitElement) {
         }
         .navbar-principal a.home:hover, .navbar-principal a.default:hover {
           background: #fff;
-          color: #233142;
+          color: #182A4B;
         }
 
         .social-github {
