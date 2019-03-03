@@ -91,8 +91,8 @@ class HomePage extends PageDM {
     }
     .xtreme h2{
       margin-block-start: 0;
-      margin-block-end: 0;
-      transform: skew(20deg);
+      margin-block-end: 0;      
+      font-family: 'Bangers', cursive;
       font-size: 50px;
     }
     .xtreme span {
@@ -100,6 +100,8 @@ class HomePage extends PageDM {
       margin-left: 15px;
       color: #F9CE22;
       font-weight: 900;
+      font-family: 'Bangers', cursive;
+      letter-spacing: 1.5px;
     }
 
     @media screen and (max-width: 740px){
