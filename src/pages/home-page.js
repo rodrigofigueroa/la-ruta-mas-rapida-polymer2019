@@ -134,25 +134,7 @@ class HomePage extends PageDM {
             <mapa-element style="height:65vh;width:80vw" selectLocationMode></mapa-element>
           </article>
           <article class="rutas">        
-            <div class="elige-rutas">
-              <h1>Rutas </h1>
-            </div>     
-            <div class="container-rutas">               
-              <select class="custom-select-dos">
-                  <option value="r-1">Ruta 1</option>
-                  <option value="r-2">Ruta 2</option>
-                  <option value="r-3">Ruta 3</option>
-                  <option value="r-4">Ruta 4</option>
-              </select>        
-              <div class="contenedor-ps">       
-                <p class="cm-ruta">🚍 5 autobuses en ruta</p>         
-                <p class="cm-min">🕑 4 minutos para que llegue</p>
-                <p class="cm-prox">🚏 Proxima Parada Tal</p>
-                <p> 💥 Hubo un choque demorará el Cámion </p>
-                <p> 🌧️ Esta lloviendo demorara el Cámion </p>
-                <p> 🚌  Se desvio el camion a la siguiente parada </p>
-              </div>
-            </div>
+              <list-component></list-component>
           </article>      
       </section>
       <section class="xtreme">
