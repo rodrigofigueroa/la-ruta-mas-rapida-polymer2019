@@ -27,10 +27,12 @@ class HomePage extends PageDM {
         border-radius: 10px;
         background: #f2f2f2;        
         overflow: hidden;
+        order: 1;
       }
       .container-mapa .rutas{
         width: 35%;        
         border-radius: 10px;
+        order: 2;
       }
       .contenedor-ps {
         display: flex;
@@ -112,11 +114,14 @@ class HomePage extends PageDM {
       }
       .container-mapa .rutas{
         width: 100%;        
-        border-radius: 10px;
+        border-radius: 10px;        
+      }
+      .container-mapa .mapa{        
+        order: 2;
         margin-top: 15px;
       }
-      .contenedor-ps p{
-        width: 50%;
+      .container-mapa .rutas{   
+        order: 1;
       }
     }
     `;
