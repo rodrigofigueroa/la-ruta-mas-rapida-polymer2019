@@ -80,7 +80,7 @@ class HomePage extends PageDM {
     return html`
       <section class="container-mapa">      
           <article class="mapa">
-            <p>inserta el mapa aqui</p>
+            <mapa-element style="height:65vh;width:80vw" selectLocationMode></mapa-element>
           </article>
           <article class="rutas">        
             <div class="elige-rutas">
@@ -102,8 +102,45 @@ class HomePage extends PageDM {
             </div>
           </article>      
       </section>
-      <list-component></list-component>
-      <mapa-element></mapa-element>
+
+      <script>
+            const googleMapsLimitedRef = document.querySelector("mapa-element");
+            googleMapsLimitedRef.apiKey = "AIzaSyBofyebOA_vPYkqLekj1s032wsngQKUnOo";
+            googleMapsLimitedRef.markers = [
+              {
+                position: {lat:41, lng:-112},
+                InfoWindowContent: "<h3>The Salt Lake City, UT Temple</h3>"
+              },
+              {
+                position: {lat:33, lng:-117},
+                InfoWindowContent: "<h3>The San Diego, CA Temple</h3>"
+              },
+              {
+                position: {lat:29, lng:-82},
+                InfoWindowContent: "<h3>The Orlando, FL Temple</h3>"
+              },
+              {
+                position: {lat:43, lng:-70},
+                InfoWindowContent: "<h3>The Cape Elizabeth, ME Temple</h3>"
+              }
+            ]
+            function changeMarkers(e) {
+              console.log(e);
+              googleMapsLimitedRef.markers = [              
+              {
+                position: {lat:50, lng:-112},
+                InfoWindowContent: "<h3>Not The Salt Lake City, UT Temple</h3>"
+              },
+              {
+                position: {lat:33, lng:-117},
+                InfoWindowContent: "<h3>The San Diego, CA Temple</h3>"
+              },
+              {
+                position: {lat:29, lng:-82},
+                InfoWindowContent: "<h3>The Orlando, FL Temple</h3>"
+              }]
+            }
+          </script>
     `;
   }
 }
