@@ -5,21 +5,35 @@ import './list-element';
 class HomePage extends PageDM {
   static get styles() {
     return css`
+    .rutas{
+      transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.05) 0px 1px 1px;
+      transition: 1s ease all;
+    }
+      .rutas:hover{
+        transform: translateY(0px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 80px, rgba(0, 0, 0, 0.05) 0px 5px 20px;
+        cursor:pointer;
+      }
       .container-mapa {
         padding: 10px;        
         display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
       }
       .container-mapa .mapa{
         width: 60%;
+        border-radius: 10px;
         background: #f2f2f2;
       }
       .container-mapa .rutas{
-        width: 40%;
-        background: #f2f2f2;
+        width: 35%;        
+        border-radius: 10px;
       }
       .custom-select-dos{
+        margin: 10px;
         display: inline-block;
-        width: 100%;
+        width: 80%;
         height: calc(2.25rem + 2px);
         padding: .375rem 1.75rem .375rem .75rem;
         line-height: 1.5;
@@ -33,14 +47,30 @@ class HomePage extends PageDM {
         -moz-appearance: none;
         appearance: none;
     }
+    .container-rutas {  
+      padding: 0px 15px;
+    }
     .elige-rutas{
         width: 100%;
-      background: red;
+      background: #009f9d;
+      color:#fff;
       text-align: center;
+      border-radius: 10px 10px 0px 0px;
     }
     .elige-rutas h1{
       margin-block-end: 0;
       margin-block-start: 0;
+    }
+
+    @media screen and (max-width: 740px){
+      .container-mapa .mapa{
+        width: 100%;
+        background: #f2f2f2;
+      }
+      .container-mapa .rutas{
+        width: 100%;        
+        border-radius: 10px;
+      }
     }
     `;
   }
