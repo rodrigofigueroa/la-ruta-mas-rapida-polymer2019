@@ -82,6 +82,9 @@ class HomePage extends PageDM {
       .container-mapa .rutas{   
         order: 1;
       }
+      section.xtreme > img {
+        display: none;
+      }
     }
     `;
   }
