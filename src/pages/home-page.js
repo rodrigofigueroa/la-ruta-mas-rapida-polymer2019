@@ -25,7 +25,8 @@ class HomePage extends PageDM {
       .container-mapa .mapa{
         width: 60%;
         border-radius: 10px;
-        background: #f2f2f2;
+        background: #f2f2f2;        
+        overflow: hidden;
       }
       .container-mapa .rutas{
         width: 35%;        
@@ -62,11 +63,22 @@ class HomePage extends PageDM {
       margin-block-end: 0;
       margin-block-start: 0;
     }
+    section > article.mapa > mapa-element{
+          width: auto!important; 
+    }
+    #map, #map > div{
+      border-radius: 10px;
+    }
+    .xtreme {
+      background:#213872;
+      color:
+    }
 
     @media screen and (max-width: 740px){
       .container-mapa .mapa{
         width: 100%;
         background: #f2f2f2;
+        border-radius: 10px;
       }
       .container-mapa .rutas{
         width: 100%;        
@@ -101,6 +113,9 @@ class HomePage extends PageDM {
               <p> Se desvio el camion a la siguiente parada </p>
             </div>
           </article>      
+      </section>
+      <section class="xtreme">
+        <h2 >Xtreme </h2>
       </section>
 
       <script>
