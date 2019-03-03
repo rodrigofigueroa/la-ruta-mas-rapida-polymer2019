@@ -52,8 +52,8 @@ class HomePage extends PageDM {
     }
     .elige-rutas{
         width: 100%;
-      background: #009f9d;
-      color:#fff;
+      background: #D90749;
+      color:#F9CE22;
       text-align: center;
       border-radius: 10px 10px 0px 0px;
     }

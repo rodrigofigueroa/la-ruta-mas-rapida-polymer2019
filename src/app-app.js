@@ -40,7 +40,7 @@ class App extends connect(store)(LitElement) {
           grid-area: header;
           min-height: 60px;
           line-height: 30px;
-          background-color: #182A4B;
+          background-color: #213872;
           color: #fff;
           text-align:center;
         }
@@ -52,6 +52,9 @@ class App extends connect(store)(LitElement) {
           height: 60px;
           display: flex;
           justify-content: center;
+          background: #F9CE22;
+          color: #D90749;
+          font-weight: 900;
         }
         .container-app {
           /*padding: 15px;*/
