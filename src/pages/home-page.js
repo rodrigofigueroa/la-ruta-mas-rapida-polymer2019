@@ -71,7 +71,24 @@ class HomePage extends PageDM {
     }
     .xtreme {
       background:#213872;
-      color:
+      color: #D90749;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:10px 0px;
+      margin: 10px 0px;
+    }
+    .xtreme h2{
+      margin-block-start: 0;
+      margin-block-end: 0;
+      transform: skew(20deg);
+      font-size: 50px;
+    }
+    .xtreme span {
+      transform: skew(0deg);
+      margin-left: 15px;
+      color: #F9CE22;
+      font-weight: 900;
     }
 
     @media screen and (max-width: 740px){
@@ -115,7 +132,7 @@ class HomePage extends PageDM {
           </article>      
       </section>
       <section class="xtreme">
-        <h2 >Xtreme </h2>
+        <h2 >Xtreme </h2><span> RUTAS</span>
       </section>
 
       <script>
