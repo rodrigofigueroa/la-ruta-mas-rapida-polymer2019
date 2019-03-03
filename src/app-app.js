@@ -40,8 +40,9 @@ class App extends connect(store)(LitElement) {
           grid-area: header;
           min-height: 60px;
           line-height: 30px;
-          background-color: #7986CB;
+          background-color: #233142;
           color: #e5e5e5;
+          text-align:center;
         }
         .main-app {
           grid-area: main;
@@ -78,13 +79,17 @@ class App extends connect(store)(LitElement) {
         .navbar-principal a{
           padding: 0 15px;
           position: relative;
+          border-r
         }
-        .navbar-principal a.home {
-          background-color: #5C6BC0;
+        .navbar-principal a.home, .navbar-principal a.default {
+          transition: 1s ease all;
+          font-size:1.3em;          
         }
-        .navbar-principal a.default {
-          background-color: #3F51B5;
+        .navbar-principal a.home:hover, .navbar-principal a.default:hover {
+          background: #fff;
+          color: #233142;
         }
+
         .social-github {
           display: flex;
           flex: 0 auto;
