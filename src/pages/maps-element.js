@@ -12,14 +12,18 @@ export class MapsElement extends LitElement {
             icon: {type: String},
             selectedIcon: {type: String},
             selectLocationMode: {type: Boolean},
-            selectedInfoWindowContent: {type: String}
+            selectedInfoWindowContent: {type: String},
+            long: {type:String},
+            lat: {type:String}
         }
     }
     constructor(){
         super()
+        this.lat = 19.428475;
+        this.long = -99.206574;
         window.addEventListener('google-map-ready', () => {
             this._mapRef = new google.maps.Map(this.shadowRoot.querySelector('#map'), {
-              center: { lat: 19.428475, lng: -99.206574 },
+              center: { lat: this.lat, lng: this.long },
               zoom: 16,
               streetViewControl: false,
             });
@@ -45,6 +49,21 @@ export class MapsElement extends LitElement {
             this.icon = this.icon || 'camioncito.svg';
             this.selectedIcon = this.selectedIcon || 'camioncito.svg';
     }
+
+    getTruckData(){
+      // document.addEventListener('DOMContentLoaded', event => {
+          const app = firebase.app();
+          const db = firebase.firestore();
+          const truck1 = db.collection('trucks').doc('truck1');
+          truck1.onSnapshot( doc => {
+              const data = doc.data()
+              // document.write(data)
+              this.prop = data
+              console.log(this.prop)
+          }  
+              )
+      // })
+  }
 
     firstUpdated() {
         this.shadowRoot.appendChild(this._mapScriptTag());
@@ -131,6 +150,11 @@ export class MapsElement extends LitElement {
       
 
     render(){
+      this.getTruckData()
+      // console.log(this.prop)
+      // this.lat = this.prop.latitud
+      // this.long = this.prop.longitud
+      
         return html `
             <style>
                 :host {
