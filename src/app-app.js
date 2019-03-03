@@ -129,7 +129,7 @@ class App extends connect(store)(LitElement) {
         </div>
         <nav class="navbar-principal">
           <a class="home" ?selected="${this._page === 'home'}" href="/home">Home</a>
-          <a class="default" ?selected="${this._page === 'default'}" href="/default">More</a>
+          <a class="default" ?selected="${this._page === 'default'}" href="/default">Ayudar</a>
         </nav>
       </header>
       <!-- Main content -->
