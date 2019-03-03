@@ -54,7 +54,7 @@ class App extends connect(store)(LitElement) {
         }
         .footer-app {
           grid-area: footer;
-          height: 60px;
+          height: auto;
           display: flex;
           justify-content: center;
           background: #F9CE22;
@@ -66,8 +66,15 @@ class App extends connect(store)(LitElement) {
           box-sizing: border-box;
         }
         .container-footer {
+          width: 100%;
           padding: 0 15px;
           box-sizing: border-box;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          /* text-align: center; */
+          align-items: center;
+          justify-content: space-around;
         }
         a {
           color: inherit;
@@ -81,6 +88,7 @@ class App extends connect(store)(LitElement) {
           display:flex;
           justify-content: center;
           align-items: center;
+          font-weight: 500;
         }
         .navbar-principal {
           display: flex;
@@ -98,7 +106,7 @@ class App extends connect(store)(LitElement) {
         }
         .navbar-principal a.home:hover, .navbar-principal a.default:hover {
           background: #fff;
-          color: #182A4B;
+          color: #c00538;
         }
 
         .social-github {
@@ -161,7 +169,8 @@ class App extends connect(store)(LitElement) {
       </main>
       <footer class="footer-app">
         <div class="container-footer">
-          <p>Desarrollado por team "Los Guaches".</p>
+          <p>Desarrollado por team "Los Guaches".</p>          
+          <p>BBVA Bancomer</p> <p>Softtek</p> <p>Google</p>
         </div>
       </footer>
     `;
