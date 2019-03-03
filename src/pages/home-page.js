@@ -48,7 +48,6 @@ class HomePage extends PageDM {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding:10px 0px;
       margin: 10px 0px;
     }
     .xtreme h2{
