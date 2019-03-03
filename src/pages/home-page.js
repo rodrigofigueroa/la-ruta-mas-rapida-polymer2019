@@ -99,6 +99,7 @@ class HomePage extends PageDM {
       </section>
       <section class="xtreme">
         <h2 >Xtreme </h2><span> RUTAS</span>
+        <img src="https://resources.redbull.com/logos/redbullcom/v1/redbullcom-logo.svg" alt="Smiley face" class="loguito" >        
       </section>
 
       <script>
