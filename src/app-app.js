@@ -170,7 +170,7 @@ class App extends connect(store)(LitElement) {
       <footer class="footer-app">
         <div class="container-footer">
           <p>Desarrollado por team "Los Guaches".</p>          
-          <p>BBVA Bancomer</p> <p>Softtek</p> <p>Google</p>
+          <p>BBVA Bancomer</p> <p>Softtek</p> <p>Google</p> <p>Singular</p>
         </div>
       </footer>
     `;

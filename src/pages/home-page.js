@@ -48,7 +48,6 @@ class HomePage extends PageDM {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding:10px 0px;
       margin: 10px 0px;
     }
     .xtreme h2{
@@ -82,6 +81,9 @@ class HomePage extends PageDM {
       }
       .container-mapa .rutas{   
         order: 1;
+      }
+      section.xtreme > img {
+        display: none;
       }
     }
     `;
