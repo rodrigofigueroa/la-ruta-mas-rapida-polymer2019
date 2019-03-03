@@ -55,7 +55,7 @@ export class MapsElement extends LitElement {
         const lang = 'en'
         // init google maps
         const googleMapsLoader = document.createElement('script');
-        googleMapsLoader.src = `https://maps.${this.inChina ? 'google.cn' : 'googleapis.com'}/maps/api/js?key=${this.apiKey}&language=${lang === 'zh' ? 'zh-TW' : lang}&callback=initMap`;
+        googleMapsLoader.src = `https://maps.${this.inChina ? 'google.cn' : 'googleapis.com'}/maps/api/js?key=${"AIzaSyBk3H3mZgWUkh-IKn42UQwtmNLnYvG6TqI"}&language=${lang === 'zh' ? 'zh-TW' : lang}&callback=initMap`;
         googleMapsLoader.async = true;
         googleMapsLoader.defer = true;
         return googleMapsLoader;
