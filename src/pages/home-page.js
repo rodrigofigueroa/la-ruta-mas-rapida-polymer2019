@@ -1,5 +1,6 @@
 import {html, css} from 'lit-element';
 import {PageDM} from '../utils/page-dm.js';
+import './list-element';
 
 class HomePage extends PageDM {
   static get styles() {
@@ -100,6 +101,7 @@ class HomePage extends PageDM {
             </div>
           </article>      
       </section>
+      <list-component></list-component>
     `;
   }
 }
