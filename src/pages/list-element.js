@@ -41,16 +41,14 @@ export class ListComponent extends LitElement {
         <select class="custom-select-dos">
             <option value="r-1">Ruta 1</option>
             <option value="r-2">Ruta 2</option>
-            <option value="r-3">Ruta 3</option>
-            <option value="r-4">Ruta 4</option>
         </select>     
         <div class="contenedor-ps">       
             <p class="cm-ruta">🚍 ${this.prop.nCamiones} autobuses en ruta</p>         
             <p class="cm-min">🕑 ${this.prop.tiempoLlegada} minutos para que llegue</p>
             <p class="cm-prox">🚏 Proxima Parada ${this.prop.nextStage}</p>
-            ${this.prop.choque? `<p> 💥 Hubo un choque demorará el Cámion </p>`: ``}
-            ${this.prop.clima? `<p> 🌧️ Esta lloviendo demorara el Cámion </p>`:``}
-            ${this.prop.desvio? `<p> 🚌  Se desvio el camion a la siguiente parada </p>`: ``}
+            ${this.prop.choque? html`<p> 💥 Hubo un choque demorará el Cámion </p>`:html``}
+            ${this.prop.clima? html`<p> 🌧️ Esta lloviendo demorara el Cámion </p>`:html``}
+            ${this.prop.desvio? html`<p> 🚌  Se desvio el camion a la siguiente parada </p>`:html``}
         </div>
     </div>
     `;
