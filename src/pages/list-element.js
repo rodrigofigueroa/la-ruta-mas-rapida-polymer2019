@@ -1,5 +1,17 @@
 import { html, LitElement } from 'lit-element';
 
+document.addEventListener('DOMContentLoaded', event => {
+    const app = firebase.app();
+    const db = firebase.firestore();
+    const truck1 = db.colledtion('trucks').doc('truck1');
+    truck1.onSnapshot( doc => {
+        const data = doc.data()
+        document.write(data)
+        console.log(data);
+    }  
+        )
+})
+
 export class ListComponent extends LitElement {
     
     static get properties(){
@@ -9,8 +21,10 @@ export class ListComponent extends LitElement {
     }
     constructor(){
         super();
-        this.prop = 'Hola que hace'
+        this.prop = ''
     }
+
+    
 
    render(){
     return html `
