@@ -71,6 +71,11 @@ export class ListComponent extends LitElement {
                 )
         // })
     }
+
+    OnChange (){
+        let select = document.getElementById('ruta').value
+        console.log(select)
+    }
     
 
    render(){
@@ -83,7 +88,7 @@ export class ListComponent extends LitElement {
         <h1>Rutas </h1>
     </div>     
     <div class="container-rutas">               
-        <select class="custom-select-dos" id="ruta">
+        <select class="custom-select-dos" id="ruta" @change="OnChange() ">
             <option value="r-1">Ruta 1</option>
             <option value="r-2">Ruta 2</option>
         </select>     

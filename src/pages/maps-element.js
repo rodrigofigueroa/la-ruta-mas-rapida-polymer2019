@@ -34,6 +34,7 @@ export class MapsElement extends LitElement {
             this._infoWindow.addListener('closeclick', () => {
                 this.selectedMarkerId = null;
             });
+            
             if(this.selectLocationMode) {
                 google.maps.event.addListener(this._mapRef, 'click', (event) => {
                 if(this._mapMarkers) this._mapMarkers.map((marker) => marker.setMap(null));
