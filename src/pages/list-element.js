@@ -91,12 +91,12 @@ export class ListComponent extends LitElement {
             <option value="r-4">Ruta 4</option>
         </select>     
         <div class="contenedor-ps">       
-            <p class="cm-ruta">🚍 5 autobuses en ruta</p>         
-            <p class="cm-min">🕑 4 minutos para que llegue</p>
-            <p class="cm-prox">🚏 Proxima Parada Tal</p>
-            <p> 💥 Hubo un choque demorará el Cámion </p>
-            <p> 🌧️ Esta lloviendo demorara el Cámion </p>
-            <p> 🚌  Se desvio el camion a la siguiente parada </p>
+            <p class="cm-ruta">🚍 ${this.prop.nCamiones} autobuses en ruta</p>         
+            <p class="cm-min">🕑 ${this.prop.tiempoLlegada} minutos para que llegue</p>
+            <p class="cm-prox">🚏 Proxima Parada ${this.prop.nextStage}</p>
+            ${this.prop.choque? `<p> 💥 Hubo un choque demorará el Cámion </p>`: ``}
+            ${this.prop.clima? `<p> 🌧️ Esta lloviendo demorara el Cámion </p>`:``}
+            ${this.prop.desvio? `<p> 🚌  Se desvio el camion a la siguiente parada </p>`: ``}
         </div>
     </div>
     `;
