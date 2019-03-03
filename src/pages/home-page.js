@@ -1,6 +1,7 @@
 import {html, css} from 'lit-element';
 import {PageDM} from '../utils/page-dm.js';
-import './list-element';
+import './list-element.js';
+import './maps-element.js';
 
 class HomePage extends PageDM {
   static get styles() {
@@ -102,6 +103,7 @@ class HomePage extends PageDM {
           </article>      
       </section>
       <list-component></list-component>
+      <mapa-element></mapa-element>
     `;
   }
 }
