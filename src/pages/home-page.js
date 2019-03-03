@@ -6,16 +6,7 @@ import './maps-element.js';
 class HomePage extends PageDM {
   static get styles() {
     return css`
-    .rutas{
-      transform: translateY(2px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.05) 0px 1px 1px;
-      transition: 1s ease all;
-    }
-      .rutas:hover{
-        transform: translateY(0px);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 80px, rgba(0, 0, 0, 0.05) 0px 5px 20px;
-        cursor:pointer;
-      }
+    
       .container-mapa {
         padding: 10px;        
         display: flex;
@@ -29,53 +20,22 @@ class HomePage extends PageDM {
         overflow: hidden;
         order: 1;
       }
-      .container-mapa .rutas{
+      .rutas{
+        transform: translateY(2px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px, rgba(0, 0, 0, 0.05) 0px 1px 1px;
+        transition: 1s ease all;
+      }
+        .rutas:hover{
+          transform: translateY(0px);
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 80px, rgba(0, 0, 0, 0.05) 0px 5px 20px;
+          cursor:pointer;
+        }
+    article.rutas{
         width: 35%;        
         border-radius: 10px;
         order: 2;
       }
-      .contenedor-ps {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .contenedor-ps p{
-        width: 100%;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin: 10px 0px;
-      }
-      .custom-select-dos{
-        margin: 10px 0px;
-        display: inline-block;
-        width: 100%;
-        height: calc(2.25rem + 2px);
-        padding: .375rem 1.75rem .375rem .75rem;
-        line-height: 1.5;
-        color: #495057;
-        vertical-align: middle;
-        background: #fff url(data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' v…0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E) no-repeat right .75rem center;
-        background-size: 8px 10px;
-        border: 1px solid #ced4da;
-        border-radius: .25rem;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
-    .container-rutas {  
-      padding: 0px 15px;
-    }
-    .elige-rutas{
-        width: 100%;
-      background: #D90749;
-      color:#F9CE22;
-      text-align: center;
-      border-radius: 10px 10px 0px 0px;
-    }
-    .elige-rutas h1{
-      margin-block-end: 0;
-      margin-block-start: 0;
-    }
+     
     section > article.mapa > mapa-element{
           width: auto!important; 
     }
@@ -139,6 +99,7 @@ class HomePage extends PageDM {
       </section>
       <section class="xtreme">
         <h2 >Xtreme </h2><span> RUTAS</span>
+        <img src="https://resources.redbull.com/logos/redbullcom/v1/redbullcom-logo.svg" alt="Smiley face" class="loguito" >        
       </section>
 
       <script>
