@@ -32,10 +32,21 @@ class HomePage extends PageDM {
         width: 35%;        
         border-radius: 10px;
       }
+      .contenedor-ps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .contenedor-ps p{
+        width: 100%;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin: 10px 0px;
+      }
       .custom-select-dos{
-        margin: 10px;
+        margin: 10px 0px;
         display: inline-block;
-        width: 80%;
+        width: 100%;
         height: calc(2.25rem + 2px);
         padding: .375rem 1.75rem .375rem .75rem;
         line-height: 1.5;
@@ -95,11 +106,15 @@ class HomePage extends PageDM {
       .container-mapa .mapa{
         width: 100%;
         background: #f2f2f2;
-        border-radius: 10px;
+        border-radius: 10px;        
       }
       .container-mapa .rutas{
         width: 100%;        
         border-radius: 10px;
+        margin-top: 15px;
+      }
+      .contenedor-ps p{
+        width: 50%;
       }
     }
     `;
@@ -121,13 +136,15 @@ class HomePage extends PageDM {
                   <option value="r-2">Ruta 2</option>
                   <option value="r-3">Ruta 3</option>
                   <option value="r-4">Ruta 4</option>
-              </select>              
-              <p class="cm-ruta"> 5 Camiones en ruta</p>         
-              <p class="cm-min"> 4 minutos para que llegue</p>
-              <p class="cm-prox"> Proxima Parada Tal</p>
-              <p> Hubo un choque demorará el Cámion </p>
-              <p>Esta lloviendo demorara el Cámion </p>
-              <p> Se desvio el camion a la siguiente parada </p>
+              </select>        
+              <div class="contenedor-ps">       
+                <p class="cm-ruta">🚍 5 autobuses en ruta</p>         
+                <p class="cm-min">🕑 4 minutos para que llegue</p>
+                <p class="cm-prox">🚏 Proxima Parada Tal</p>
+                <p> 💥 Hubo un choque demorará el Cámion </p>
+                <p> 🌧️ Esta lloviendo demorara el Cámion </p>
+                <p> 🚌  Se desvio el camion a la siguiente parada </p>
+              </div>
             </div>
           </article>      
       </section>
