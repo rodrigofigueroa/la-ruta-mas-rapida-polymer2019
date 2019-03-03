@@ -54,7 +54,7 @@ class App extends connect(store)(LitElement) {
           justify-content: flex-start;
         }
         .container-app {
-          padding: 15px;
+          /*padding: 15px;*/
           box-sizing: border-box;
         }
         .container-footer {
@@ -70,6 +70,9 @@ class App extends connect(store)(LitElement) {
           font-weight: lighter;
           font-size: 1.5rem;
           flex: 1 auto;
+          display:flex;
+          justify-content: center;
+          align-items: center;
         }
         .navbar-principal {
           display: flex;
