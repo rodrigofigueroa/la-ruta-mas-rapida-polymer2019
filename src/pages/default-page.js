@@ -18,6 +18,12 @@ class DefaultPage extends PageDM {
           .principal-container{
             height: 100vh;
           }
+          .principal-container {
+            max-width: 600px;
+            margin-left:auto;
+            margin-right: auto;
+            padding: 0px;          
+          }
         }
       `;
     }
@@ -27,21 +33,22 @@ class DefaultPage extends PageDM {
         <section class="principal-container">
           <h2>Preguntas</h2>
           <ol>
-            <li>¿Si no encuntras una ruta?
-              <ul>
-                Estamos en constante crecimiento puedes ayudarnos a enviarla para que la agreguemos.
-              </ul>
+            <li>¿Si no encuntras una ruta?              
             </li>
-            <li>¿La applicación no funciona?
-              <ul>
+              <p>
+                <i>Estamos en constante crecimiento puedes ayudarnos a enviarla para que la agreguemos.</i>
+              </p>
+            <li>
+            ¿La applicación no funciona?              
+            </li>
+            <p>
                 Recuerda que necesita datos y tambien tu ubucación para poder ayudarte.
-              </ul>
+              </p>
+            <li>¿Dudas de como utilizar la APP o consejos?              
             </li>
-            <li>¿Dudas de como utilizar la APP o consejos?
-              <ul>
+            <p>
                 Mandanos un email a <a href="emailto:">rutaextremacontacto@rutaextrema.com</a> o comunicate al 57854124545.
-              </ul>
-            </li>
+              </p>
           </ol>
         </section>
       `;
