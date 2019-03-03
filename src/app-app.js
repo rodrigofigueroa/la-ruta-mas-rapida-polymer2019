@@ -40,7 +40,12 @@ class App extends connect(store)(LitElement) {
           grid-area: header;
           min-height: 60px;
           line-height: 30px;
-          background-color: #213872;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#072768+19,c00538+75 */
+          background: #072768; /* Old browsers */
+          background: -moz-linear-gradient(left, #072768 19%, #c00538 75%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, #072768 19%,#c00538 75%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right, #072768 19%,#c00538 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072768', endColorstr='#c00538',GradientType=1 ); /* IE6-9 */
           color: #fff;
           text-align:center;
         }
@@ -104,6 +109,9 @@ class App extends connect(store)(LitElement) {
         .social-github img{
           height: 60%;
         }
+        .loguito{
+          margin-left: 10px;
+        }
         @media (max-width: 600px) {
           .header-app {
             flex-flow: column nowrap
@@ -115,6 +123,11 @@ class App extends connect(store)(LitElement) {
           .navbar-principal a{
             flex: 1 auto;
           }
+          .loguito {
+            display: block;
+            text-align: center;
+            margin: 0 auto;            
+          }
         }
       `;
     }
@@ -124,6 +137,7 @@ class App extends connect(store)(LitElement) {
     return html`
       <!-- Header -->
       <header class="header-app">
+      <img src="./images/cutmypic.png" alt="Smiley face" class="loguito" width="100px" height="50px">
         <div class="title container-app">
           ¿Donde viene mi camión?
         </div>
